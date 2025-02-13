@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    background-color: #dbdcd5;
+}
+
+ul{
+        list-style: none;
+}
+ul li a{
+    text-decoration: none;
+}
+
+@media screen and (min-width:0px)and (max-width:600px) {
+    main{
+        padding-top: 100px;
+    }
+    header{
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        width: 100%;
+    }
+    .redes:hover{
+        transition: 3s;
+        background-color:#e6dddd ;
+    }
+    .redes{
+        padding: 14px;
+        width: 30px;
+    }
+    footer{
+        display: flex; 
+        justify-content: space-around;   
+
+        background-color: #a49ca1;
+        width: 100%;
+        color: white;
+    }
+    .parrafo{
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px 10px;
+    }
+    input::placeholder{
+        font-size: 15px;
+        padding-left: 20px;
+        
+    }
+    select{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 0.5em;
+        padding-left: 15px;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    button:hover{
+        background-color:#bcb4b4 ;
+    }
+    button:active{
+        background-color:#a49ca1 ;
+    }
+    button {
+        width: 100%;
+        background-color: #a49ca1; 
+        color: black; 
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.5s ease; 
+    }
+
+    
+    input{
+        margin: 10px;
+        width: 300px;
+        height: 40px;
+        border: 1px solid #ced4da;
+    }
+    .sexo{
+        width: 300px;
+        height: 40px;
+        margin: 10px;
+    }
+    .title{
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #a4a494;
+        border-radius: 40px 40px;
+    }
+    .formcal{
+        display: block;
+        justify-content: center;
+        border: 2px solid black;
+        border-radius: 5px 5px;
+        padding: 20px;
+        margin: 10px;
+        background-color: #eeeeee;
+    }
+    label{
+        font-size: 15px;
+        
+    }
+   
+
+    ul{
+        display: none;
+    }
+    .desplegable a{
+        text-decoration: none;
+    }
+    .menu {
+        display: flex;
+        display: inline-block;
+        margin: 20px;
+    }
+
+    .menu button {
+        background-color: #dbdcd5;
+        color: rgb(0, 0, 0); 
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 1000;
+    }
+    .close-button{
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+    }
+    .close-button:hover{
+        color: #000;
+    }
+
+    .dropdown-content {
+        
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%; 
+            background-color: #dbdcd5;
+            z-index: 999;
+          
+        
+    }
+
+    .dropdown-content a {
+        
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .show{
+        display: block;
+    }
+    
+
+}

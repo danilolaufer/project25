@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./app.js" defer></script>
+    <title>Focus!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#"><img class="logo" href="#"  src="./multimedia/logo.jpg" alt=""> </a>
+            
+            <div class="menu">
+                <button onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+                <div id="dropdownContent" class="dropdown-content">
+                    <a href="./pages/ejercicios.html">Ejercicios</a>
+                    <a href="./pages/comidas.html">Comidas</a>
+                    <a href="./pages/preguntas.html">Preguntas</a>
+                    <a href="./pages/contacto.html">Contacto</a>
+                </div>
+            </div>
+            <ul >
+                <li><a href="./pages/ejercicios.html">EJERCICIOS</a></li>
+                <li><a href="./pages/comidas.html">COMIDAS</a></li>
+                <li><a href="./pages/preguntas.html">PREGUNTAS</a></li>
+                <li><a href="./pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="title">CALCULADORA DE CALORIAS</h2>
+        <p></p>
+        
+        <div class="formcal">
+            <b><label for="">Tu sexo</b>
+                <br>
+                <select class="sexo" name="sexo" id="sexo">
+                    <option class="seleccione" value="opcion">Selecciona una opcion</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+            </label>
+            <br>
+            <b><label for="">Tu edad:</b>
+            <br>
+                <input type="number" placeholder="Introduce tu edad">
+            </label>
+            <br>
+            <b><label for="">Tu peso (KG)</b>
+                <br>
+                <input type="number" placeholder="Introduce tu peso">
+            </label>
+            <br>
+            <b><label for="">Tu altura (CM)</b>
+                <br>
+                <input type="number" placeholder="Introduce tu altura">
+            </label>
+            <br>
+            <b><label for="">¿Cual es tu nivel de actividad fisica semanal?</b>
+                <br>
+                <select class="sexo" name="ejercicio" id="ejercicio">
+                    <option value="opcion">Selecciona una opcion</option>
+                    <option value="sedentaria">Sedentaria: poco o nada de ejercicio</option>
+                    <option value="ligera">Actividad ligera: ejercicio ligero o deporte 1-3 dias de la semana</option>
+                    <option value="moderada">Actividad moderada: ejercicio moderado o deporte 3-5 dias de la semana</option>
+                    <option value="intensa">Actividad intensa: ejericico intenso o deporte 6-7 dias de la semana</option>
+                    <option value="muyintensa">Actividad MUY intensa: ejericico MUY intenso o trabajo fisico y ejercicio diario</option>
+                </select>
+            </label>
+            <br>
+            <b><label for="">¿Cual es tu objetivo?</b>
+                <br>
+                <select class="sexo" name="objetivo" id="objetivo">
+                    <option value="opcion">Selecciona una opcion</option>
+                    <option value="aumentar">Aumentar masa muscular</option>
+                    <option value="perder">Bajar grasa corporal</option>
+                    <option value="mantener">Mantener peso actual</option>
+                </select>
+            </label>
+            <br>
+            <button type="button">Calcular</button>
+        </div>
+            <h3 class="title">Calculadora Harris Benedict 2025</h3>
+            <p class="parrafo">La fórmula original, creada en 1918, tiene en cuenta el sexo, la edad, el peso y la estatura para calcular el metabolismo basal y, posteriormente, estimar el gasto calórico total.</p>
+            <footer>
+                <div class="red">
+                    <a href="https://www.instagram.com/danilolaufer/"><img class="redes" src="./multimedia/instagram.png" alt="instagram"></a>
+                    <a href="https://www.tiktok.com"><img class="redes" src="./multimedia/tik-tok.png" alt="tiktok"></a>
+                    <a href="https://www.spotify.com"><img class="redes" src="./multimedia/spotify-logo.png" alt="spotify">  </a>                  
+                </div>
+
+                
+            </footer>
+    </main>
+</body>
+</html>
