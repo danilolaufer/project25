@@ -1,4 +1,5 @@
-//PRIMERO para ocultar o mostrar el menu
+AOS.init();
+
 function toggleMenu(){
     let dropdown = document.getElementById("dropdownContent");
     dropdown.classList.toggle("show");
@@ -12,6 +13,9 @@ window.onclick = function(event) {
         }
     }
 }
+
+
+
 
 
 

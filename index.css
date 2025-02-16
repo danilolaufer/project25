@@ -3,6 +3,12 @@
     padding: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+html,body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 .logo{
     width: 100px;
     height: 100px;
@@ -14,6 +20,11 @@ header nav{
 }
 header{
     background-color: #dbdcd5;
+    display: fixed;
+    width: 100%;
+    z-index: 1001;
+
+    
 }
 
 ul{
@@ -24,8 +35,132 @@ ul li a{
 }
 
 @media screen and (min-width:0px)and (max-width:600px) {
+    .titlecomida{
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #333;
+        border-bottom: 3px solid #ddd;
+        padding-bottom: 5px;
+    }
+    .comidas {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .tarjeta {
+        display: flex;
+        align-items: center;
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tarjeta img {
+        width: 60px;
+        height: 60px;
+        object-fit:contain;
+        margin-right: 15px;
+    }
+    
+    .info h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+    }
+    
+    .info p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #666;
+    }
+    
+    .musculos{
+        font-size: 40px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        margin: 40px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .musculos:hover{
+        transform: scale(1.1);
+        color: #c28570;
+    }
+    .imgejer{
+        width: 90%;  
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6 ease, transform 0.6 ease;
+    }
+    .imgejer.aparecer{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .titlexe{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 50px;
+        text-align: center;
+        padding: 20px;
+        background-color: #a49ca1;
+        color: #000;
+        
+    }
+    .titlexe:hover{
+        color: #333;
+        transition: 0.4s ease;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 95%;
+        place-items: center;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        
+        
+        
+        
+    }
+    
+    textarea{
+        margin: 10px;
+        border-radius: 5px 5px;
+        border: 1px solid #ced4da;
+        resize: none;
+        width: 100%;
+        
+    }
+    .titlecontac{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .formcontac{
+        border: 1px solid black;
+        margin: 30px;
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        background-color: #eeeeee;
+    }
     main{
         padding-top: 100px;
+        flex: 1;
     }
     header{
         border: none;
@@ -40,6 +175,11 @@ ul li a{
     .redes{
         padding: 14px;
         width: 30px;
+        filter: grayscale(100%);
+        transition: filter 0.3 ease-in-out;
+    }
+    .redes:hover{
+        filter: grayscale(0%);
     }
     footer{
         display: flex; 
@@ -53,9 +193,10 @@ ul li a{
         display: flex;
         justify-content: center;
         margin: 30px;
-        border: 1px solid black;
         padding: 10px;
-        border-radius: 10px 10px;
+        font-size: 13px;
+
+        
     }
     input::placeholder{
         font-size: 15px;
@@ -109,8 +250,7 @@ ul li a{
         text-align: center;
         margin-top: 10px;
         padding: 10px;
-        background-color: #a4a494;
-        border-radius: 40px 40px;
+        text-shadow: 1px 5px 3px  #a49ca1;
     }
     .formcal{
         display: block;
@@ -145,7 +285,7 @@ ul li a{
         border: none;
         cursor: pointer;
         font-size: 16px;
-        z-index: 1000;
+        z-index: 1001;
     }
     .close-button{
         top: 20px;
