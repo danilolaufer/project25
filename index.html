@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="./app.js" defer></script>
-    <title>Focus!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Focus!</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#"><img class="logo" href="#"  src="./multimedia/logo.jpg" alt=""> </a>
-            
+            <a><img class="logo" href="./index.html"  src="./multimedia/logo.jpg" alt=""> </a>
             <div class="menu">
                 <button onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
                 <div id="dropdownContent" class="dropdown-content">
@@ -31,6 +31,23 @@
         </nav>
     </header>
     <main>
+        <div class="carrusel-contenedor">
+            <div class="carrusel">
+                <div class="items"><img src="./multimedia/carrusel/correr.jpg" alt="iamgen1"></div>
+                
+                <div class="items"><img src="./multimedia/carrusel/escalada.webp" alt="iamgen2"></div>
+                <div class="items"><img src="./multimedia/carrusel/gym.jpg" alt="iamgen3"></div>
+                <div class="items"><img src="./multimedia/carrusel/natacion.jpg" alt="iamgen4"></div>
+                <div class="items"><img src="./multimedia/carrusel/futbol.jpg!d" alt="iamgen5"></div>    
+            
+            </div>
+        </div>
+        <div class="botoncarru">
+            <button class="retra" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="siguiente" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        
+
         <h2 class="title">CALCULADORA DE CALORIAS</h2>
         <p></p>
         
@@ -46,17 +63,17 @@
             <br>
             <b><label for="">Tu edad:</b>
             <br>
-                <input type="number" placeholder="Introduce tu edad">
+                <input id="edad" type="number" placeholder="Introduce tu edad">
             </label>
             <br>
             <b><label for="">Tu peso (KG)</b>
                 <br>
-                <input type="number" placeholder="Introduce tu peso">
+                <input id="peso" type="number" placeholder="Introduce tu peso">
             </label>
             <br>
             <b><label for="">Tu altura (CM)</b>
                 <br>
-                <input type="number" placeholder="Introduce tu altura">
+                <input id="altura" type="number" placeholder="Introduce tu altura">
             </label>
             <br>
             <b><label for="">¿Cual es tu nivel de actividad fisica semanal?</b>
@@ -81,9 +98,28 @@
                 </select>
             </label>
             <br>
-            <button type="button">Calcular</button>
+            <button type="submit" id="calcular">Calcular</button>
+            
         </div>
-            <h3 class="title">Calculadora Harris Benedict 2025</h3>
+        <div class="centrar">
+            <div id="tabla-calorias" style="display:none;">
+                
+                <h3 id="tabla-objetivo"></h3>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nivel</th>
+                            <th>Calorías / Día</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-calorias-contenido"></tbody>
+                </table>
+            </div>
+        </div>
+        
+        
+            <h3 class="titlefooter">Calculadora Harris Benedict 2025</h3>
             <p class="parrafo">La fórmula original, creada en 1918, tiene en cuenta el sexo, la edad, el peso y la estatura para calcular el metabolismo basal y, posteriormente, estimar el gasto calórico total.</p>
             <footer>
                 <div class="red">

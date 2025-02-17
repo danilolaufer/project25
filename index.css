@@ -28,15 +28,140 @@ header{
 }
 
 ul{
+        display: flex;
         list-style: none;
+        justify-content: space-between;
+        margin-right: 300px;
+        margin-top: 35px;
+        
 }
 ul li a{
     text-decoration: none;
+    color: black;
+    margin-left: 20px;
 }
 
 @media screen and (min-width:0px)and (max-width:600px) {
+    
+    .carrusel-contenedor{
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .carrusel{
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .items{
+        min-width: 100%;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .items img{
+        width: 100%;
+        height: 300px;
+    
+    }
+    .botoncarru{
+        display: flex;
+        transform: translateY(-50%);
+        color: white;
+        justify-content:space-between;
+        cursor: pointer;
+        z-index: 10;
+        margin: 5px;
+        
+        
+    }
+    .retra{
+        position: relative;
+        top: -150px;
+        width: 10px;
+        background-color: white;
+        opacity: 0.4;
+
+        
+    }
+    .siguiente{
+        position: relative;
+        top: -150px;
+        width: 10px;
+        background-color: white;
+        opacity: 0.4;
+
+        
+
+    }
+    .retra:hover{
+        opacity: 1;
+    }
+    .siguiente:hover{
+        opacity: 1;
+    }
+    .checkbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .circulo{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .circulo input{
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #e2e3de;
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+    .circulo input:checked{
+        background-color: #333;
+        border-color: #000;
+    }
+    .botones{
+        display: flex;
+        margin: 5px;
+        gap: 40px;
+    }
+    .titlefooter{
+        text-align: center;
+    }
+    #tabla-calorias-contenido{
+        background-color:#e2e3de ;
+    }
+    #tabla-calorias{
+        display: none;
+        border-collapse: collapse;
+        width: 100%;
+        transition: opacity 0.5s ease-in-out;
+        
+    }
+    
+    #tabla-calorias th, #tabla-calorias td{
+        border: 1px solid #ddd;
+        padding: 8px;
+        width: 70%;
+        
+        
+    }
+    #tabla-calorias th{
+        background-color: #f2f2f2;
+        
+    }
+    #tabla-objetivo{
+        padding: 10px;
+        text-align: center;
+    }
+    
     .titlecomida{
-        font-size: 20px;
+        font-size: 17px;
         margin-bottom: 15px;
         color: #333;
         border-bottom: 3px solid #ddd;
@@ -47,7 +172,10 @@ ul li a{
         margin: auto;
         padding: 20px;
     }
-    
+    .centrar{
+        display: flex;
+        
+    }
     
     
     .grid {
@@ -236,6 +364,7 @@ ul li a{
 
     
     input{
+        padding-left: 10px;
         margin: 10px;
         width: 300px;
         height: 40px;
@@ -250,7 +379,7 @@ ul li a{
         text-align: center;
         margin-top: 10px;
         padding: 10px;
-        text-shadow: 1px 5px 3px  #a49ca1;
+        text-shadow: 1px 3px 3px  #a49ca1;
     }
     .formcal{
         display: block;
@@ -325,6 +454,379 @@ ul li a{
     .show{
         display: block;
     }
+    
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:601px) {
+    
+    .carrusel-contenedor{
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .carrusel{
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .items{
+        min-width: 100%;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .items img{
+        width: 100%;
+        height: 800px;
+    
+    }
+    .botoncarru{
+        display: flex;
+        transform: translateY(-50%);
+        color: white;
+        justify-content:space-between;
+        cursor: pointer;
+        z-index: 10;
+        margin: 5px;
+        
+        
+    }
+    .retra{
+        position: relative;
+        top: -150px;
+        width: 10px;
+        background-color: white;
+        opacity: 0.4;
+
+        
+    }
+    .siguiente{
+        position: relative;
+        top: -150px;
+        width: 10px;
+        background-color: white;
+        opacity: 0.4;
+
+        
+
+    }
+    .retra:hover{
+        opacity: 1;
+    }
+    .siguiente:hover{
+        opacity: 1;
+    }
+    .checkbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .circulo{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .circulo input{
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #e2e3de;
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+    .circulo input:checked{
+        background-color: #333;
+        border-color: #000;
+    }
+    .botones{
+        display: flex;
+        margin: 5px;
+        gap: 40px;
+    }
+    .titlefooter{
+        text-align: center;
+    }
+    #tabla-calorias-contenido{
+        background-color:#e2e3de ;
+    }
+    #tabla-calorias{
+        display: none;
+        border-collapse: collapse;
+        width: 100%;
+        transition: opacity 0.5s ease-in-out;
+        
+    }
+    
+    #tabla-calorias th, #tabla-calorias td{
+        border: 1px solid #ddd;
+        padding: 8px;
+        width: 70%;
+        
+        
+    }
+    #tabla-calorias th{
+        background-color: #f2f2f2;
+        
+    }
+    #tabla-objetivo{
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .titlecomida{
+        font-size: 17px;
+        margin-bottom: 15px;
+        color: #333;
+        border-bottom: 3px solid #ddd;
+        padding-bottom: 5px;
+    }
+    .comidas {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+    .centrar{
+        display: flex;
+        
+    }
+    
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .tarjeta {
+        display: flex;
+        align-items: center;
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tarjeta img {
+        width: 60px;
+        height: 60px;
+        object-fit:contain;
+        margin-right: 15px;
+    }
+    
+    .info h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+    }
+    
+    .info p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #666;
+    }
+    
+    .musculos{
+        font-size: 40px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        margin: 40px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .musculos:hover{
+        transform: scale(1.1);
+        color: #c28570;
+    }
+    .imgejer{
+        width: 90%;  
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6 ease, transform 0.6 ease;
+    }
+    .imgejer.aparecer{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .titlexe{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 50px;
+        text-align: center;
+        padding: 20px;
+        background-color: #a49ca1;
+        color: #000;
+        
+    }
+    .titlexe:hover{
+        color: #333;
+        transition: 0.4s ease;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 95%;
+        place-items: center;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        
+        
+        
+        
+    }
+    
+    textarea{
+        margin: 10px;
+        border-radius: 5px 5px;
+        border: 1px solid #ced4da;
+        resize: none;
+        width: 100%;
+        
+    }
+    .titlecontac{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .formcontac{
+        border: 1px solid black;
+        margin: 30px;
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        background-color: #eeeeee;
+    }
+    main{
+        padding-top: 100px;
+        flex: 1;
+    }
+    header{
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        width: 100%;
+    }
+    .redes:hover{
+        transition: 3s;
+        background-color:#e6dddd ;
+    }
+    .redes{
+        padding: 14px;
+        width: 30px;
+        filter: grayscale(100%);
+        transition: filter 0.3 ease-in-out;
+    }
+    .redes:hover{
+        filter: grayscale(0%);
+    }
+    footer{
+        display: flex; 
+        justify-content: space-around;   
+
+        background-color: #a49ca1;
+        width: 100%;
+        color: white;
+    }
+    .parrafo{
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+        padding: 10px;
+        font-size: 13px;
+
+        
+    }
+    input::placeholder{
+        font-size: 15px;
+        padding-left: 20px;
+        
+    }
+    select{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 0.5em;
+        padding-left: 15px;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    button:hover{
+        background-color:#bcb4b4 ;
+    }
+    button:active{
+        background-color:#a49ca1 ;
+    }
+    button {
+        width: 100%;
+        background-color: #a49ca1; 
+        color: black; 
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.5s ease; 
+    }
+
+    
+    input{
+        padding-left: 10px;
+        margin: 10px;
+        width: 300px;
+        height: 40px;
+        border: 1px solid #ced4da;
+    }
+    .sexo{
+        width: 300px;
+        height: 40px;
+        margin: 10px;
+    }
+    .title{
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        text-shadow: 1px 3px 3px  #a49ca1;
+    }
+    .formcal{
+        display: block;
+        justify-content: center;
+        border: 2px solid black;
+        border-radius: 5px 5px;
+        padding: 20px;
+        margin: 10px;
+        background-color: #eeeeee;
+    }
+    label{
+        font-size: 15px;
+        
+    }
+   
+
+    .menu{
+        display: none;
+
+    }
+    
+
     
 
 }
