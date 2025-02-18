@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css">
-    <script src="../app.js" defer></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Focus!</title>
+    <script src="../app.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="../index.html"><img class="logo" href="#"  src="../multimedia/logo.jpg" alt=""> </a>
+            <a href="../index.html"><h1 class="focus">Focus!</h1></a>
             <div class="menu">
                 <button onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
@@ -32,7 +33,32 @@
         </nav>
     </header>
     <main>
-        
+        <h1 class="titlecomida">Preguntas Frecuentes:</h1>
+    <div class="faq-carousel">
+        <div class="faq-item active">
+            <h2>¿Qué son los macronutrientes?</h2>
+            <p>Los macronutrientes son los nutrientes que necesitamos en grandes cantidades: proteínas, carbohidratos y grasas. Son esenciales para obtener energía y mantener las funciones corporales.</p>
+        </div>
+        <div class="faq-item">
+            <h2>¿Cómo calculo mis calorías diarias?</h2>
+            <p>Puedes calcular tus calorías diarias utilizando fórmulas como la de Harris-Benedict, que tiene en cuenta tu sexo, edad, peso, altura y nivel de actividad física.</p>
+        </div>
+        <div class="faq-item">
+            <h2>¿Es importante contar macros?</h2>
+            <p>Sí, contar macros te ayuda a asegurarte de que estás consumiendo la cantidad adecuada de proteínas, carbohidratos y grasas para alcanzar tus objetivos, ya sea perder grasa, ganar músculo o mantener tu peso.</p>
+        </div>
+        <div class="carousel-buttons">
+            <button onclick="prevFaq()"><i class="fas fa-chevron-left"></i> Anterior</button>
+            <button onclick="nextFaq()">Siguiente <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div class="info-section animate__animated animate__fadeInUp">
+        <h2>Consejos para una Alimentación Saludable</h2>
+        <p>
+            Una alimentación saludable es clave para mantener un buen estado físico y mental. Aquí tienes algunos consejos:
+        </p>
+    </div>
     </main>
     <footer>
         <div class="red">

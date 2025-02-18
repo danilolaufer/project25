@@ -3,15 +3,203 @@
     padding: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+.faq-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-item {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.faq-item.active {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.faq-item h2 {
+    font-size: 1.8rem;
+    color: #41666b;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Botones del carrusel */
+.carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carousel-buttons button {
+    background-color: #41666b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+.carousel-buttons button:hover {
+    background-color: #5ca4ac;
+}
+
+/* Información detallada */
+.info-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s ease-in-out;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    color: #41666b;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-carousel, .info-section {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .faq-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-item p {
+        font-size: 1rem;
+    }
+
+    .info-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .info-section p {
+        font-size: 1rem;
+    }
+}
+
+
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Ajuste importante para que funcione */
+}
+
+.carrusel-contenedor img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carrusel-boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carrusel-boton-prev { left: 10px; }
+.carrusel-boton-next { right: 10px; }
+
+@media (max-width: 600px) {
+    .carousel { max-width: 100%; }
+}
+.fondooscuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cookie-alert {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-alert p {
+    margin-bottom: 15px;
+}
+
+.cookie-alert button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cookie-alert button:hover {
+    background-color: #e6b800;
+}
 html,body{
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
-}
-.logo{
-    width: 100px;
-    height: 100px;
 }
 
 header nav{
@@ -19,7 +207,7 @@ header nav{
     justify-content: space-between;
 }
 header{
-    background-color: #dbdcd5;
+    background-color: #41666b;
     display: fixed;
     width: 100%;
     z-index: 1001;
@@ -30,19 +218,45 @@ header{
 ul{
         display: flex;
         list-style: none;
-        justify-content: space-between;
-        margin-right: 300px;
-        margin-top: 35px;
+        margin: 20px;
         
+}
+ul li{
+    height: 20px;
+    padding: 10px;
+    border-radius: 5px 5px;
 }
 ul li a{
     text-decoration: none;
-    color: black;
-    margin-left: 20px;
+    color: rgb(255, 255, 255);
+    
+}
+ul li:hover{
+    background-color: #5ca4ac;
+}
+
+.explicacion{
+    font-size: 12px;
+    width: 400px;
 }
 
 @media screen and (min-width:0px)and (max-width:600px) {
-    
+
+    .harris{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .quees{
+        font-size: 12px;
+        width: 350px;
+        margin: 0 auto;
+        background-color: #b3c5d4;
+        padding: 15px;
+        border-radius: 5px 5px;
+   
+        
+    }
     .carrusel-contenedor{
         position: relative;
         max-width: 100%;
@@ -92,6 +306,10 @@ ul li a{
         
 
     }
+    .options{
+        display: flex;
+
+    }
     .retra:hover{
         opacity: 1;
     }
@@ -114,8 +332,7 @@ ul li a{
         appearance: none;
         width: 20px;
         height: 20px;
-        border-radius: 50%;
-        border: 2px solid #e2e3de;
+        border: 2px solid #41666b;
         margin-right: 10px;
         position: relative;
         cursor: pointer;
@@ -132,9 +349,11 @@ ul li a{
     }
     .titlefooter{
         text-align: center;
+        padding: 20px;
+        font-size: 20px;
     }
     #tabla-calorias-contenido{
-        background-color:#e2e3de ;
+        background-color:#e0deda ;
     }
     #tabla-calorias{
         display: none;
@@ -241,18 +460,17 @@ ul li a{
         transform: translateY(0);
     }
     .titlexe{
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family:fantasy;
         font-size: 50px;
         text-align: center;
         padding: 20px;
-        background-color: #a49ca1;
-        color: #000;
+        
+        background-color: #41666b;
+        color: #ffffff;
+        
         
     }
-    .titlexe:hover{
-        color: #333;
-        transition: 0.4s ease;
-    }
+    
     .grid{
         display: grid;
         grid-template-columns: 95%;
@@ -295,25 +513,33 @@ ul li a{
         cursor: pointer;
         position: fixed;
         width: 100%;
+    
+    }
+    .focus{
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        top: 25px;
+        left: 30px;
     }
     .redes:hover{
         transition: 3s;
         background-color:#e6dddd ;
     }
     .redes{
-        padding: 14px;
+        padding: 17px;
         width: 30px;
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         transition: filter 0.3 ease-in-out;
     }
     .redes:hover{
-        filter: grayscale(0%);
+        filter: grayscale(80%);
     }
     footer{
         display: flex; 
         justify-content: space-around;   
 
-        background-color: #a49ca1;
+        background-color: #41666b;
         width: 100%;
         color: white;
     }
@@ -345,15 +571,15 @@ ul li a{
         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
     button:hover{
-        background-color:#bcb4b4 ;
+        background-color: #5ca4ac;
     }
     button:active{
-        background-color:#a49ca1 ;
+        background-color:#41666b ;
     }
     button {
         width: 100%;
-        background-color: #a49ca1; 
-        color: black; 
+        background-color: #41666b; 
+        color: white; 
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -379,7 +605,6 @@ ul li a{
         text-align: center;
         margin-top: 10px;
         padding: 10px;
-        text-shadow: 1px 3px 3px  #a49ca1;
     }
     .formcal{
         display: block;
@@ -388,7 +613,7 @@ ul li a{
         border-radius: 5px 5px;
         padding: 20px;
         margin: 10px;
-        background-color: #eeeeee;
+        background-color: #e0deda;
     }
     label{
         font-size: 15px;
@@ -409,11 +634,11 @@ ul li a{
     }
 
     .menu button {
-        background-color: #dbdcd5;
-        color: rgb(0, 0, 0); 
+        background-color: #41666b;
+        color: white; 
         border: none;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 20px;
         z-index: 1001;
     }
     .close-button{
@@ -434,7 +659,7 @@ ul li a{
             top: 80px;
             left: 0;
             width: 100%; 
-            background-color: #dbdcd5;
+            background-color: #41666b;
             z-index: 999;
           
         
@@ -442,14 +667,14 @@ ul li a{
 
     .dropdown-content a {
         
-        color: black;
+        color: white;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
     }
 
     .dropdown-content a:hover {
-        background-color: #f1f1f1;
+        background-color: #5ca4ac;
     }
     .show{
         display: block;
@@ -466,8 +691,31 @@ ul li a{
 
 
 
-@media screen and (min-width:601px) {
-    
+@media screen and (min-width:601px) {    
+    .linea {
+        border: none;
+        height: 1px;
+        background-color: black;
+        margin: 20px 0;
+      }
+
+    .article{
+        
+        display: grid;
+        grid-template-columns: 50% 10px 50%;
+        margin: 100px;
+
+    }
+    .quees{
+        font-size: 14px;
+        width: 600px;
+        margin: 0 auto;
+        background-color: #b3c5d4;
+        padding: 15px;
+        border-radius: 5px 5px;
+   
+        
+    }
     .carrusel-contenedor{
         position: relative;
         max-width: 100%;
@@ -555,9 +803,7 @@ ul li a{
         margin: 5px;
         gap: 40px;
     }
-    .titlefooter{
-        text-align: center;
-    }
+    
     #tabla-calorias-contenido{
         background-color:#e2e3de ;
     }
@@ -670,7 +916,7 @@ ul li a{
         font-size: 50px;
         text-align: center;
         padding: 20px;
-        background-color: #a49ca1;
+        background-color: #41666b;
         color: #000;
         
     }
@@ -680,11 +926,11 @@ ul li a{
     }
     .grid{
         display: grid;
-        grid-template-columns: 95%;
+        grid-template-columns: 50%;
         place-items: center;
         text-align: center;
-        width: 100%;
         overflow: hidden;
+        justify-content: center;
         
         
         
@@ -700,11 +946,13 @@ ul li a{
         
     }
     .titlecontac{
-        font-size: 20px;
+        font-size: 25px;
         text-align: center;
         margin-top: 20px;
+        padding: 40px;
     }
     .formcontac{
+        
         border: 1px solid black;
         margin: 30px;
         padding: 20px;
@@ -721,6 +969,13 @@ ul li a{
         position: fixed;
         width: 100%;
     }
+    .focus{
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        top: 25px;
+        left: 30px;
+    }
     .redes:hover{
         transition: 3s;
         background-color:#e6dddd ;
@@ -728,28 +983,31 @@ ul li a{
     .redes{
         padding: 14px;
         width: 30px;
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         transition: filter 0.3 ease-in-out;
     }
     .redes:hover{
-        filter: grayscale(0%);
+        filter: grayscale(100%);
     }
     footer{
         display: flex; 
-        justify-content: space-around;   
-
-        background-color: #a49ca1;
+        justify-content: space-evenly;   
+        background-color: #41666b;
         width: 100%;
         color: white;
     }
     .parrafo{
-        display: flex;
-        justify-content: center;
-        margin: 30px;
-        padding: 10px;
-        font-size: 13px;
-
         
+        padding: 30px;
+        font-size: 13px;
+        width: 100%;
+
+   
+    }
+    .titlefooter{
+        font-size: 20px;
+        text-align: center;
+        margin-left: 40px;
     }
     input::placeholder{
         font-size: 15px;
@@ -773,12 +1031,12 @@ ul li a{
         background-color:#bcb4b4 ;
     }
     button:active{
-        background-color:#a49ca1 ;
+        background-color:#41666b ;
     }
     button {
         width: 100%;
-        background-color: #a49ca1; 
-        color: black; 
+        background-color: #41666b; 
+        color: white; 
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -787,7 +1045,9 @@ ul li a{
         transition: background-color 0.5s ease; 
     }
 
-    
+    .harris{
+        margin: 70px;
+    }
     input{
         padding-left: 10px;
         margin: 10px;
@@ -803,17 +1063,21 @@ ul li a{
     .title{
         text-align: center;
         margin-top: 10px;
-        padding: 10px;
-        text-shadow: 1px 3px 3px  #a49ca1;
+        padding: 20px;
     }
     .formcal{
         display: block;
-        justify-content: center;
+        width: 320px;
         border: 2px solid black;
         border-radius: 5px 5px;
         padding: 20px;
-        margin: 10px;
+        margin: 30px;
         background-color: #eeeeee;
+        
+    }
+    .responsive{
+        display: flex;
+        justify-content: center;
     }
     label{
         font-size: 15px;

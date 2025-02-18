@@ -1,5 +1,5 @@
-AOS.init();
-function toggleMenu(){
+
+ function toggleMenu(){
     let dropdown = document.getElementById("dropdownContent");
     dropdown.classList.toggle("show");
 }
@@ -18,6 +18,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function noNumero() {
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+
+    const regex = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/;
+    if (!regex.test(nombre)) {
+        alert("El nombre no puede contener números ni caracteres especiales.");
+        return false; 
+    }
+    if (!regex.test(apellido)) {
+        alert("El apellido no puede contener números ni caracteres especiales.");
+        return false; 
+    }
+
+    alert("Nombre y apellido válidos.");
+    return true;
+}
+
+
 function calcularCalorias() {
     let sexo = document.getElementById("sexo").value;
     let edad = parseInt(document.getElementById("edad").value);
@@ -30,6 +49,8 @@ function calcularCalorias() {
         alert("completa todos los campos correctamente.");
         return;
     }
+    
+    
 
     let tmb;
     if (sexo === "Hombre") {
@@ -88,26 +109,40 @@ function calcularCalorias() {
     document.getElementById("tabla-calorias").style.display = "block";
 }
 
-let index = 0;
-const slides = document.querySelectorAll(".items");
-const totalSlides = slides.length;
-
-function moveSlide(step) {
-    index += step;
-    
-    if (index < 0) {
-        index = totalSlides - 1;
-    } else if (index >= totalSlides) {
-        index = 0;
-    }
-
-    document.querySelector(".carrusel").style.transform = `translateX(-${index * 100}%)`;
+function aceptarCookies() {
+    document.getElementById("cookieOverlay").style.display = "none";
+    localStorage.setItem("cookiesAceptadas", "true");
 }
 
+window.onload = function () {
+    if (localStorage.getItem("cookiesAceptadas") === "true") {
+        document.getElementById("cookieOverlay").style.display = "none";
+    }
+};
 
+ let currentFaqIndex = 0;
+ const faqItems = document.querySelectorAll(".faq-item");
 
+ function showFaq(index) {
+     faqItems.forEach((item, i) => {
+         item.classList.remove("active");
+         if (i === index) {
+             item.classList.add("active");
+         }
+     });
+ }
 
+ function nextFaq() {
+     currentFaqIndex = (currentFaqIndex + 1) % faqItems.length;
+     showFaq(currentFaqIndex);
+ }
 
+ function prevFaq() {
+     currentFaqIndex = (currentFaqIndex - 1 + faqItems.length) % faqItems.length;
+     showFaq(currentFaqIndex);
+ }
 
+ showFaq(currentFaqIndex);
+ AOS.init();
 
 
